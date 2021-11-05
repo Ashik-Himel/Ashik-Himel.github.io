@@ -98,6 +98,9 @@
 }
 
 /* Hero Section */
+.hero-section {
+    margin-top: var(--mt-section);
+}
 .hero-section img {
     display: block;
     margin: 0 auto;
@@ -165,9 +168,6 @@
 
 @media (min-width: 768px) {
     /* Hero Section */
-    .hero-section {
-        margin-top: var(--mt-section);
-    }
     .hero-section .row {
         flex-direction: row-reverse;
     }
