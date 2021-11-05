@@ -99,9 +99,6 @@
 }
 
 /* Hero Section */
-.hero-section {
-    margin-top: var(--mt-section);
-}
 .hero-section img {
     display: block;
     margin: 0 auto;
@@ -183,7 +180,7 @@
 }
 .card:hover * {
     color: white;
-    transition: color 0.5s ease;
+    transition: color 0.5s ease, background-color 0.5s ease;
 }
 .card:hover .btn , .card:hover .btn i {
     background-color: white;
@@ -203,6 +200,9 @@
 
 @media (min-width: 768px) {
     /* Hero Section */
+    .hero-section {
+        margin-top: var(--mt-section);
+    }
     .hero-section .row {
         flex-direction: row-reverse;
     }
