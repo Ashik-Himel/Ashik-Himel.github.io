@@ -16,6 +16,10 @@
 .title-area {
     text-align: center;
 }
+.title-area h2 {
+    font-size: 2rem;
+    margin-bottom: var(--mb-title);
+}
 
 .btn {
     display: inline-block;

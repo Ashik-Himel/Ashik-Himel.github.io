@@ -7,11 +7,12 @@
     --light-color: #ffffff;
     --gray-color: #3e3e3e;
 
-    --mt-section: 2.5rem;
     --section-gap: 1.5rem;
-
+    --mt-section: 2.5rem;
     --mb-heading: 1rem;
     --mb-paragraph: 1.5rem;
+    --mb-title: 0.5rem;
+    --border-radius: 0.5rem;
 }
 * , *::before , *::after {
     margin: 0;
