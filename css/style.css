@@ -125,6 +125,44 @@
     font-size: 2rem;
 }
 
+/* Skills Section */
+.skills-section .row {
+    gap: 0;
+}
+.skills-section .row > div {
+    width: 100%;
+}
+.progress-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    border-radius: 5px;
+    background-color: var(--light-color);
+    margin-bottom: 1.5rem;
+}
+.progress {
+    height: 100%;
+    background-color: var(--primary-color);
+    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-size: 1rem 1rem;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+/* Services Section */
+.card {
+    background-color: var(--gray-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+}
+
+
+
 @media (min-width: 768px) {
     /* Hero Section */
     .hero-section {
@@ -139,6 +177,11 @@
     .hero-section .btn-alt {
         display: block;
         margin-top: 3rem;
+    }
+
+    /* Skills Section */
+    .skills-section .row {
+        gap: 15%;
     }
 }
 @media (min-width: 992px) {
