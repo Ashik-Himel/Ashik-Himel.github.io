@@ -153,8 +153,8 @@
     background-color: var(--primary-color);
     background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
     background-size: 1rem 1rem;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
+    border-bottom-left-radius: inherit;
+    border-top-left-radius: inherit;
 }
 
 /* Services Section */
@@ -162,6 +162,31 @@
     background-color: var(--gray-color);
     border-radius: var(--border-radius);
     padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+.card::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary-color);
+    z-index: -1;
+    transition: top 0.5s ease;
+}
+.card:hover::after {
+    top: 0;
+    border-radius: inherit;
+}
+.card:hover * {
+    color: white;
+    transition: color 0.5s ease;
+}
+.card:hover .btn , .card:hover .btn i {
+    background-color: white;
+    color: var(--primary-color);
 }
 .card > i {
     color: var(--primary-color);
