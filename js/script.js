@@ -1,7 +1,7 @@
-const hamburger = document.querySelector('.hamburger');
-const navLink = document.querySelectorAll('.nav-link');
-const navSection = document.querySelector('.nav-section');
-const navScrollHeight = navSection.offsetHeight;
+let hamburger = document.querySelector('.hamburger');
+let navLink = document.querySelectorAll('.nav-link');
+let navSection = document.querySelector('.nav-section');
+let navScrollHeight = navSection.offsetHeight;
 
 function navAndCrossToggle() {
     navSection.classList.toggle('show-nav');
@@ -11,21 +11,16 @@ function navAndCrossClose() {
     navSection.classList.remove('show-nav');
     hamburger.classList.remove('cross-hamburger');
 }
-
-hamburger.onclick = navAndCrossToggle;
-navLink.forEach(n => n.addEventListener('click', navAndCrossClose));
-
-window.addEventListener('click' , function(e) {
+function eTargetNavAndCrossClose(e) {
     if(navSection.contains(e.target)) {
         
     }
     else{
         return navAndCrossClose();
     }
-});
-
-window.addEventListener('scroll' , function() {
-    const scrollLength = window.scrollY;
+}
+function scrollNavSticky() {
+    let scrollLength = window.scrollY;
     if (scrollLength >= navScrollHeight) {
         navSection.classList.add('nav-sticky');
     }
@@ -33,23 +28,52 @@ window.addEventListener('scroll' , function() {
         navSection.classList.remove('nav-sticky');
     }
     console.log(scrollLength);
-});
-const swiper = new Swiper('.swiper', {
+}
+
+hamburger.onclick = navAndCrossToggle;
+navLink.forEach(n => n.addEventListener('click', navAndCrossClose));
+window.addEventListener('click' , eTargetNavAndCrossClose);
+window.addEventListener('scroll' , scrollNavSticky);
+
+// Hire Me Popup
+let popupBtn = document.querySelector('.popup-btn');
+let popupBtn2 = document.querySelector('.hero-popup-btn');
+let crossBtn = document.querySelector('.fa-times-circle');
+let popup = document.querySelector('.popup');
+let popupBox = document.querySelector('.popup-box');
+
+function activePopup() {
+    popup.classList.add('popup-active');
+}
+function closePopup() {
+    popup.classList.remove('popup-active');
+}
+function eTargetClosePopup(e) {
+    if(popupBox.contains(e.target) + popupBtn.contains(e.target) + popupBtn2.contains(e.target)) {
+
+    }
+    else {
+        return closePopup();
+    }
+}
+
+popupBtn.addEventListener('click' , activePopup);
+popupBtn2.addEventListener('click' , activePopup);
+crossBtn.addEventListener('click' , closePopup);
+window.addEventListener('click' , eTargetClosePopup);
+
+// Swiper JS
+let swiper = new Swiper('.swiper', {
     loop: true,
-  
-    // If we need pagination
+    speed: 800,
+    autoplay: {
+        delay: 2000,
+    },
     pagination: {
       el: '.swiper-pagination',
     },
-  
-    // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
     },
   });

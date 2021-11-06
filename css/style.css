@@ -1,10 +1,43 @@
+/* Hire Me PopUp */
+.popup {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 6;
+    display: none;
+}
+.popup-box {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    background-color: var(--gray-color);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.popup-active {
+    display: block;
+}
+.popup-box .fa-times-circle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
 /* Navigation Area */
 .nav-section {
     padding: 0.8rem;
     background-color: var(--dark-color);
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 5;
     transition: background-color 0.5s ease;
 }
 .nav-sticky, .show-nav {
@@ -102,6 +135,9 @@
 }
 
 /* Hero Section */
+.hero-section {
+    margin-top: 0.5rem;
+}
 .hero-section img {
     display: block;
     margin: 0 auto;
@@ -203,6 +239,12 @@
 
 
 @media (min-width: 768px) {
+    /* Hire Me Popup */
+    .popup-box {
+        width: 500px;
+        height: 400px;
+    }
+
     /* Hero Section */
     .hero-section {
         margin-top: var(--mt-section);
@@ -230,6 +272,12 @@
     }
 }
 @media (min-width: 992px) {
+    /* Hire Me PopUp */
+    .popup-box {
+        width: 700px;
+        height: 500px;
+    }
+
     .hamburger {
         display: none;
     }
