@@ -1,3 +1,12 @@
+// Preloader
+let loading = document.querySelector('.loading');
+let bodyElement = document.querySelector('#home');
+function loadingNone() {
+    loading.style.display = 'none';
+}
+bodyElement.onload = loadingNone;
+
+// Hamburger Menu
 let hamburger = document.querySelector('.hamburger');
 let navLink = document.querySelectorAll('.nav-link');
 let navSection = document.querySelector('.nav-section');

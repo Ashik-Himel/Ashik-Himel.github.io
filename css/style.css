@@ -1,3 +1,17 @@
+/* Preloader */
+.loading {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--dark-color);
+    background-image: url(../images/loading.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+}
+
 /* Hire Me PopUp */
 .popup {
     position: fixed;
