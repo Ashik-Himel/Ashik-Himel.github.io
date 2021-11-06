@@ -108,7 +108,8 @@
     max-width: 75%;
 }
 .hero-section .btn-alt {
-    display: none;
+    display: inline-block;
+    margin-left: 2rem;
 }
 
 /* About Section */
@@ -214,6 +215,7 @@
     }
     .hero-section .btn-alt {
         display: block;
+        margin-left: 0;
         margin-top: 3rem;
     }
 
