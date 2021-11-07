@@ -4,10 +4,10 @@ document.querySelector('#home').onload = function() {
     document.querySelector('#home').style.overflow = 'initial';
 }
 // Hamburger Menu
-let hamburger = document.querySelector('.hamburger');
-let navLink = document.querySelectorAll('.nav-link');
-let navSection = document.querySelector('.nav-section');
-let navScrollHeight = navSection.offsetHeight;
+const hamburger = document.querySelector('.hamburger');
+const navLink = document.querySelectorAll('.nav-link');
+const navSection = document.querySelector('.nav-section');
+const navScrollHeight = navSection.offsetHeight;
 
 hamburger.onclick = function() {
     navSection.classList.toggle('show-nav');
@@ -23,17 +23,17 @@ window.onclick = function(e) {
     else{return navClose();}
 }
 window.onscroll = function() {
-    let scrollLength = window.scrollY;
+    const scrollLength = window.scrollY;
     if (scrollLength >= navScrollHeight) {navSection.classList.add('nav-sticky');}
     else {navSection.classList.remove('nav-sticky');}
     console.log(scrollLength);
 }
 // Hire Me Popup
-let popupBtn = document.querySelector('.popup-btn');
-let popupBtn2 = document.querySelector('.hero-popup-btn');
-let crossBtn = document.querySelector('.fa-times-circle');
-let popup = document.querySelector('.popup');
-let popupBox = document.querySelector('.popup-box');
+const popupBtn = document.querySelector('.popup-btn');
+const popupBtn2 = document.querySelector('.hero-popup-btn');
+const crossBtn = document.querySelector('.fa-times-circle');
+const popup = document.querySelector('.popup');
+const popupBox = document.querySelector('.popup-box');
 
 function activePopup() {
     popup.classList.add('popup-active');
@@ -49,7 +49,7 @@ function eTargetClosePopup(e) {
 }
 window.onclick = eTargetClosePopup();
 // Swiper JS
-let swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.swiper', {
     loop: true,
     speed: 800,
     autoplay: {

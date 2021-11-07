@@ -25,7 +25,7 @@ body {
     overflow: hidden;
 }
 section {
-    margin-top: 3.8rem;
+    margin-top: 4rem;
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
@@ -317,11 +317,9 @@ ul {
     color: var(--primary-color);
 }
 /* Portfolio Section */
-.portfolio-section .swiper-wrapper {
+.swiper-slide .row {
     width: 80%;
     margin: 0 auto;
-}
-.swiper-slide {
     align-items: flex-start;
 }
 .portfolio-section img {
@@ -331,7 +329,7 @@ ul {
     height: 180px;
     object-fit: cover;
 }
-.portfolio-section .swiper-button-prev, .portfolio-section .swiper-button-next {
+.swiper-button-prev, .swiper-button-next {
     display: none;
 }
 
@@ -359,7 +357,7 @@ ul {
     }
     /* Hero Section */
     .hero-section {
-        margin-top: 3.8rem;
+        margin-top: 4rem;
     }
     .hero-section .row {
         flex-direction: row-reverse;
@@ -384,11 +382,11 @@ ul {
     .swiper-slide .row {
         align-items: center;
     }
-    .portfolio-section .swiper-button-prev, .portfolio-section .swiper-button-next {
+    .swiper-button-prev, .swiper-button-next {
         display: block;
     }
     .swiper-button-prev::after, .swiper-button-next::after {
-        color: white;
+        color: var(--light-color);
     }
 }
 @media (min-width: 992px) {
@@ -414,10 +412,8 @@ ul {
         gap: 1rem;
     }
     /* Portfolio Section */
-    .portfolio-section .swiper-wrapper {
-        width: 60%;
-    }
     .swiper-slide .row {
+        width: 60%;
         gap: 3rem;
     }
 }
