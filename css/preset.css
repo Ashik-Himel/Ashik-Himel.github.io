@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 :root {
     --primary-color: #ff4500;
@@ -6,7 +6,13 @@
     --dark-color: #000000;
     --light-color: #ffffff;
     --gray-color: #2e2e2e;
-    --rounded-corner: 0.5rem;
+
+    --section-gap: 1.5rem;
+    --mt-section: 3.5rem;
+    --mb-heading: 1rem;
+    --mb-paragraph: 1.5rem;
+    --mb-title: 0.5rem;
+    --border-radius: 0.5rem;
 }
 * , *::before , *::after {
     margin: 0;
@@ -23,17 +29,16 @@ body {
     font-weight: 400;
     background-color: var(--dark-color);
     color: var(--light-color);
-    overflow: hidden;
 }
 section {
-    margin-top: 4rem;
+    margin-top: var(--mt-section);
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--mb-heading);
 }
 p {
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--mb-paragraph);
 }
 a {
     text-decoration: none;
