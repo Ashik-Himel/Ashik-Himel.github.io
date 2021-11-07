@@ -8,7 +8,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: var(--section-gap);
+    gap: 2rem;
 }
 .row > * {
     flex: 1;
@@ -18,7 +18,6 @@
 }
 .title-area h2 {
     font-size: 2rem;
-    margin-bottom: var(--mb-title);
 }
 
 .btn {
@@ -44,7 +43,6 @@
 .text-primary {
     color: var(--primary-color);
 }
-
 
 @media (min-width: 576px) {
     .container {
