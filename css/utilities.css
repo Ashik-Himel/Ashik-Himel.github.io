@@ -1,6 +1,6 @@
 .container {
     width: 100%;
-    padding: 0 15px;
+    padding: 0 1rem;
     margin: 0 auto;
 }
 .row {
@@ -8,7 +8,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: var(--section-gap);
+    gap: 2rem;
 }
 .row > * {
     flex: 1;
@@ -18,9 +18,7 @@
 }
 .title-area h2 {
     font-size: 2rem;
-    margin-bottom: var(--mb-title);
 }
-
 .btn {
     display: inline-block;
     background-color: var(--primary-color);
@@ -44,7 +42,6 @@
 .text-primary {
     color: var(--primary-color);
 }
-
 
 @media (min-width: 576px) {
     .container {

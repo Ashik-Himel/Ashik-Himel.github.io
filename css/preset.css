@@ -1,25 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 :root {
     --primary-color: #ff4500;
     --secondary-color: #d35400;
     --dark-color: #000000;
     --light-color: #ffffff;
     --gray-color: #2e2e2e;
-
-    --section-gap: 1.5rem;
-    --mt-section: 3.5rem;
-    --mb-heading: 1rem;
-    --mb-paragraph: 1.5rem;
-    --mb-title: 0.5rem;
-    --border-radius: 0.5rem;
+    --rounded-corner: 0.5rem;
 }
 * , *::before , *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
@@ -29,23 +21,26 @@ body {
     font-weight: 400;
     background-color: var(--dark-color);
     color: var(--light-color);
+    overflow: hidden;
 }
 section {
-    margin-top: var(--mt-section);
+    margin-top: 3.8rem;
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
-    margin-bottom: var(--mb-heading);
+    margin-bottom: 0.5rem;
 }
 p {
-    margin-bottom: var(--mb-paragraph);
+    margin-bottom: 1.5rem;
 }
 a {
     text-decoration: none;
     color: var(--light-color);
 }
 img {
-    max-width: 100%;
+    max-width: 75%;
+    display: block;
+    margin: 0 auto;
 }
 ul {
     list-style: none;

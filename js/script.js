@@ -3,6 +3,7 @@ let loading = document.querySelector('.loading');
 let bodyElement = document.querySelector('#home');
 function loadingNone() {
     loading.style.display = 'none';
+    bodyElement.style.overflow = 'initial';
 }
 bodyElement.onload = loadingNone;
 
