@@ -1,33 +1,53 @@
 // Preloader
-document.querySelector('#home').onload = function() {
-    document.querySelector('.loading').style.display = 'none';
-    document.querySelector('#home').style.overflow = 'initial';
+const body = document.querySelector('#home');
+const loading = document.querySelector('.loading');
+
+function preloader() {
+    loading.style.display = 'none';
+    body.style.overflow = 'initial';
 }
+body.addEventListener('load' , preloader());
+
 // Hamburger Menu
 const hamburger = document.querySelector('.hamburger');
 const navLink = document.querySelectorAll('.nav-link');
 const navSection = document.querySelector('.nav-section');
 const navScrollHeight = navSection.offsetHeight;
 
-hamburger.onclick = function() {
+function navToggle() {
     navSection.classList.toggle('show-nav');
     hamburger.classList.toggle('cross-hamburger');
 }
+hamburger.addEventListener('click' , navToggle);
+
 function navClose() {
     navSection.classList.remove('show-nav');
     hamburger.classList.remove('cross-hamburger');
 }
-navLink.forEach(n => n.addEventListener('click', navClose));
-window.onclick = function(e) {
-    if(navSection.contains(e.target)) {}
-    else{return navClose();}
+navLink.forEach(n => n.addEventListener('click' , navClose));
+
+function eNavClose(e) {
+    if(navSection.contains(e.target)) {
+
+    }
+    else{
+        return navClose();
+    }
 }
-window.onscroll = function() {
+window.addEventListener('click' , eNavClose);
+
+function scrollNav() {
     const scrollLength = window.scrollY;
-    if (scrollLength >= navScrollHeight) {navSection.classList.add('nav-sticky');}
-    else {navSection.classList.remove('nav-sticky');}
+    if (scrollLength >= navScrollHeight) {
+        navSection.classList.add('nav-sticky');
+    }
+    else {
+        navSection.classList.remove('nav-sticky');
+    }
     console.log(scrollLength);
 }
+window.addEventListener('scroll' , scrollNav);
+
 // Hire Me Popup
 const popupBtn = document.querySelector('.popup-btn');
 const popupBtn2 = document.querySelector('.hero-popup-btn');
@@ -40,14 +60,22 @@ function activePopup() {
 }
 popupBtn.addEventListener('click' , activePopup);
 popupBtn2.addEventListener('click' , activePopup);
-crossBtn.onclick = function() {
+
+function closePopup() {
     popup.classList.remove('popup-active');
 }
-function eTargetClosePopup(e) {
-    if(popupBox.contains(e.target) + popupBtn.contains(e.target) + popupBtn2.contains(e.target)) {}
-    else {return closePopup();}
+crossBtn.addEventListener('click' , closePopup);
+
+function eClosePopup(e) {
+    if(popupBox.contains(e.target) + popupBtn.contains(e.target) + popupBtn2.contains(e.target)) {
+
+    }
+    else {
+        return closePopup();
+    }
 }
-window.onclick = eTargetClosePopup();
+window.addEventListener('click' , eClosePopup);
+
 // Swiper JS
 const swiper = new Swiper('.swiper', {
     loop: true,
@@ -62,7 +90,4 @@ const swiper = new Swiper('.swiper', {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  });
+  })
