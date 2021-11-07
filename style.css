@@ -317,11 +317,6 @@ ul {
     color: var(--primary-color);
 }
 /* Portfolio Section */
-.swiper-slide .row {
-    width: 80%;
-    margin: 0 auto;
-    align-items: flex-start;
-}
 .portfolio-section img {
     border-radius: var(--rounded-corner);
     max-width: 100%;
@@ -329,8 +324,16 @@ ul {
     height: 180px;
     object-fit: cover;
 }
+.swiper-slide .row {
+    width: 80%;
+    margin: 0 auto;
+    align-items: flex-start;
+}
 .swiper-button-prev, .swiper-button-next {
     display: none;
+}
+.swiper-pagination-bullet {
+    background-color: var(--light-color);
 }
 
 @media (min-width: 576px) {
