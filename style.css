@@ -15,7 +15,7 @@
 }
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
+    scroll-padding-top: 90px;
 }
 body {
     font-family: 'Poppins', sans-serif;
@@ -57,7 +57,7 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 .row > * {
     flex: 1;
