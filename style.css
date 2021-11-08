@@ -324,6 +324,11 @@ ul {
     height: 180px;
     object-fit: cover;
 }
+.swiper {
+    width: 100%;
+    padding-bottom: 3.5rem;
+    margin-bottom: -1.5rem;
+}
 .swiper-slide .row {
     width: 80%;
     margin: 0 auto;
@@ -334,6 +339,11 @@ ul {
 }
 .swiper-pagination-bullet {
     background-color: var(--light-color);
+    transition: width 0.3s ease;
+}
+.swiper-pagination-bullet-active {
+    width: 30px;
+    border-radius: 0.5rem;
 }
 
 @media (min-width: 576px) {
