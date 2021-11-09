@@ -345,6 +345,22 @@ ul {
     width: 30px;
     border-radius: 0.5rem;
 }
+/* Banner Section */
+.banner-section .row {
+    background-color: var(--primary-color);
+    border-radius: var(--rounded-corner);
+    padding: 2rem;
+}
+.banner-section h2 {
+    font-size: 2rem;
+}
+.banner-section .btn {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+.banner-section img {
+    width: 50%;
+}
 
 @media (min-width: 576px) {
     .container {
@@ -388,8 +404,13 @@ ul {
         gap: 15%;
     }
     /* Services Section */
-    .card {
-        margin: 1rem;
+    .services-section .row {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .services-section .row > div {
+        flex-basis: 45%;
+        flex-grow: 0;
     }
     /* Portfolio Section */
     .swiper-slide .row {
@@ -423,6 +444,17 @@ ul {
         position: static;
         flex-direction: row;
         gap: 1rem;
+    }
+    /* Services Section */
+    .services-section .row {
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    .services-section .row > div {
+        flex: 1;
+    }
+    .card {
+        margin: 1rem;
     }
     /* Portfolio Section */
     .swiper-slide .row {
