@@ -411,8 +411,13 @@ input:focus, textarea:focus {
 /* Footer Section */
 .footer-section {
     background-color: var(--primary-color);
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
+    border-top-left-radius: var(--rounded-corner);
+    border-top-right-radius: var(--rounded-corner);
+}
+.footer-section .row {
+    gap: 1rem;
 }
 .footer-section p {
     margin: 0rem;
