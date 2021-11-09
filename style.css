@@ -24,7 +24,7 @@ body {
     color: var(--light-color);
     overflow: hidden;
 }
-section {
+section, footer {
     margin-top: 4rem;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -45,6 +45,9 @@ img {
 }
 ul {
     list-style: none;
+}
+textarea {
+    resize: none;
 }
 /* Utility Classes */
 .container {
@@ -361,6 +364,63 @@ ul {
 .banner-section img {
     width: 50%;
 }
+/* Contact Section */
+.contact-section .row > * {
+    width: 100%;
+}
+.contact-section .row .row {
+    gap: 0;
+}
+.contact-section label, input, textarea {
+    display: block;
+    width: 100%;
+}
+.contact-section label {
+    margin-bottom: 0.5rem;
+}
+.contact-section input, textarea {
+    background-color: var(--gray-color);
+    border: 1px solid hsla(0, 0%, 100%, 0.4);
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+input:focus, textarea:focus {
+    outline: none;
+    background-color: var(--light-color);
+}
+::placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.contact-section .card p {
+    margin-bottom: 0.8rem;
+}
+.contact-section .card p span {
+    font-weight: 500;
+    color: var(--primary-color);
+    transition: color 0.5s ease;
+}
+.contact-section .card:hover span {
+    color: var(--light-color);
+}
+.contact-section .card a {
+    text-decoration: underline;
+}
+/* Footer Section */
+.footer-section {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    text-align: center;
+}
+.footer-section p {
+    margin: 0rem;
+}
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
 
 @media (min-width: 576px) {
     .container {
@@ -422,6 +482,10 @@ ul {
     .swiper-button-prev::after, .swiper-button-next::after {
         color: var(--light-color);
     }
+    /* Contact Section */
+    .contact-section .row .row {
+        gap: 1.5rem;
+    }
 }
 @media (min-width: 992px) {
     /* Utility Classes */
@@ -460,6 +524,11 @@ ul {
     .swiper-slide .row {
         width: 60%;
         gap: 3rem;
+    }
+    /* Contact Section */
+    .contact-section .card {
+        width: 400px;
+        margin: 0 auto;
     }
 }
 @media (min-width: 1200px) {
