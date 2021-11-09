@@ -46,8 +46,31 @@ img {
 ul {
     list-style: none;
 }
+label, input, textarea {
+    display: block;
+    width: 100%;
+}
+label {
+    margin-bottom: 0.5rem;
+}
+input, textarea {
+    background-color: var(--gray-color);
+    border: 1px solid hsla(0, 0%, 100%, 0.4);
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
 textarea {
     resize: none;
+}
+input:focus , textarea:focus {
+    outline: none;
+    background-color: var(--light-color) !important;
+}
+::placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
 }
 /* Utility Classes */
 .container {
@@ -116,8 +139,9 @@ textarea {
     display: none;
 }
 .popup-box {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
+    padding: 3rem;
     border-radius: var(--rounded-corner);
     background-color: var(--gray-color);
     position: relative;
@@ -135,6 +159,21 @@ textarea {
     font-size: 2rem;
     color: var(--primary-color);
     cursor: pointer;
+}
+.popup-box > .row {
+    gap: 0;
+}
+.popup-box > .row > * {
+    width: 100%;
+}
+.popup-box input, .popup-box textarea {
+    background-color: #3e3e3e;
+}
+.popup-box [type="file"] {
+    display: inline-block;
+    width: initial;
+    background-color: transparent;
+    border: none;
 }
 /* Navigation Area */
 .nav-section {
@@ -371,29 +410,6 @@ textarea {
 .contact-section .row .row {
     gap: 0;
 }
-.contact-section label, input, textarea {
-    display: block;
-    width: 100%;
-}
-.contact-section label {
-    margin-bottom: 0.5rem;
-}
-.contact-section input, textarea {
-    background-color: var(--gray-color);
-    border: 1px solid hsla(0, 0%, 100%, 0.4);
-    padding: 12px;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-}
-input:focus, textarea:focus {
-    outline: none;
-    background-color: var(--light-color);
-}
-::placeholder {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-}
 .contact-section .card p {
     margin-bottom: 0.8rem;
 }
@@ -446,8 +462,11 @@ input:focus, textarea:focus {
     }
     /* Hire Me Popup */
     .popup-box {
-        width: 500px;
-        height: 400px;
+        width: 600px;
+        height: 500px;
+    }
+    .popup-box > .row {
+        gap: 1.5rem;
     }
     /* Hero Section */
     .hero-section {
