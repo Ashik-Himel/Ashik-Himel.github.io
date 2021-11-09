@@ -411,10 +411,10 @@ input:focus, textarea:focus {
 /* Footer Section */
 .footer-section {
     background-color: var(--primary-color);
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
-    border-top-left-radius: var(--rounded-corner);
-    border-top-right-radius: var(--rounded-corner);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 .footer-section .row {
     gap: 1rem;
@@ -490,6 +490,14 @@ input:focus, textarea:focus {
     /* Contact Section */
     .contact-section .row .row {
         gap: 1.5rem;
+    }
+    /* Footer Section */
+    .footer-section {
+        text-align: left;
+        border-radius: 0;
+    }
+    .social-icons {
+        justify-content: flex-end;
     }
 }
 @media (min-width: 992px) {
