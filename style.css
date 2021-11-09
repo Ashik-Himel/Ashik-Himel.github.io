@@ -488,6 +488,9 @@ input:focus, textarea:focus {
         color: var(--light-color);
     }
     /* Contact Section */
+    .contact-section .container > .row {
+        flex-direction: row-reverse;
+    }
     .contact-section .row .row {
         gap: 1.5rem;
     }
