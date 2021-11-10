@@ -19,7 +19,7 @@
                 <p>Hire me for your upcomming project</p>
             </div>
             <div>
-                <form action="https://formsubmit.co/ashikujjamanhimel@gmail.com" method="post">
+                <form action="https://formsubmit.co/ashikujjamanhimel@gmail.com" method="post" enctype="multipart/form-data">
                     <div class="row">
                         <div>
                             <label for="name">Your Name</label>
@@ -38,12 +38,24 @@
 
                     <input type="hidden" name="_subject" value="Hire Offer from Website!">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://portfolio-ashik-himel.netlify.app/pages/thank-you.html">
+                    <input type="hidden" name="_template" value="table">
 
                     <button type="submit" class="btn">Send Offer <i class="fas fa-paper-plane"></i></button>
                 </form>
             </div>
         </div>
     </main>
+
+    <script>
+        $.ajax({
+            url: "https://formsubmit.co/ajax/ashikujjamanhimel@gmail.com",
+            method: "POST",
+            data: {
+                name: "FormSubmit",
+                message: "I'm from Devro LABS"
+            },
+            dataType: "json"
+        });
+    </script>
 </body>
 </html>
