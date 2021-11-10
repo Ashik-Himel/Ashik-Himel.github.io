@@ -296,21 +296,28 @@
                 </div>
             </div>
             <div>
-                <div class="row">
-                    <div>
-                        <label for="name">Your Name</label>
-                        <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                <form action="https://formsubmit.co/ashikujjamanhimel@gmail.com" method="post">
+                    <div class="row">
+                        <div>
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                        </div>
+                        <div>
+                            <label for="email">Your Email</label>
+                            <input type="email" name="email" id="email" placeholder="Enter Your Email">
+                        </div>
                     </div>
-                    <div>
-                        <label for="email">Your Email</label>
-                        <input type="email" name="email" id="email" placeholder="Enter Your Email">
-                    </div>
-                </div>
-                <label for="subject">Subject</label>
-                <input type="text" name="subject" id="subject" placeholder="Enter Subject">
-                <label for="body">Your Massage</label>
-                <textarea name="body" id="body" rows="8" placeholder="Enter Your Massage"></textarea>
-                <a href="#" class="btn">Send Massage <i class="fas fa-paper-plane"></i></a>
+                    <label for="subject">Subject</label>
+                    <input type="text" name="subject" id="subject" placeholder="Enter Subject">
+                    <label for="body">Your Massage</label>
+                    <textarea name="body" id="body" rows="8" placeholder="Enter Your Massage"></textarea>
+                    <button type="submit" class="btn">Send Massage <i class="fas fa-paper-plane"></i></button>
+
+                    <input type="hidden" name="_subject" value="Contact from Website!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://portfolio-ashik-himel.netlify.app/pages/thank-you.html">
+                </form>
             </div>
         </div>
     </div>
@@ -331,6 +338,13 @@
             </div>
     </div>
 </footer>
+<!-- Messenger Chat Plugin -->
+<!-- Messenger Chat Plugin Code -->
+<div id="fb-root"></div>
+
+<!-- Your Chat Plugin code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
 
 <!-- Swiper JS Slider -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.2.0/swiper-bundle.min.js"></script>
