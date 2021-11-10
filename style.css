@@ -140,7 +140,7 @@ input:focus , textarea:focus {
 }
 .popup-box {
     width: 90%;
-    height: 90%;
+    height: auto;
     padding: 3rem;
     border-radius: var(--rounded-corner);
     background-color: var(--gray-color);
@@ -463,7 +463,6 @@ input:focus , textarea:focus {
     /* Hire Me Popup */
     .popup-box {
         width: 600px;
-        height: 500px;
     }
     .popup-box > .row {
         gap: 1.5rem;
@@ -530,7 +529,6 @@ input:focus , textarea:focus {
     /* Hire Me PopUp */
     .popup-box {
         width: 700px;
-        height: 500px;
     }
     .hamburger {
         display: none;
