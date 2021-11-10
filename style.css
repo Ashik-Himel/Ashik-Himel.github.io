@@ -22,6 +22,8 @@ body {
     font-weight: 400;
     background-color: var(--dark-color);
     color: var(--light-color);
+}
+body#home {
     overflow: hidden;
 }
 section, footer {
@@ -71,6 +73,10 @@ input:focus , textarea:focus {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 1rem;
+}
+button {
+    border: none;
+    cursor: pointer;
 }
 /* Utility Classes */
 .container {
@@ -128,7 +134,7 @@ input:focus , textarea:focus {
     z-index: 10;
 }
 /* Hire Me PopUp */
-.popup {
+/* .popup {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -174,7 +180,7 @@ input:focus , textarea:focus {
     width: initial;
     background-color: transparent;
     border: none;
-}
+} */
 /* Navigation Area */
 .nav-section {
     padding: 1rem;
@@ -442,10 +448,49 @@ input:focus , textarea:focus {
     display: flex;
     gap: 1rem;
 }
+/* Hire Me Page */
+.hire-section .container {
+    background-color: var(--gray-color);
+    padding: 1rem;
+}
+.hire-section input, .hire-section textarea {
+    background-color: #3e3e3e;
+}
+.hire-section .row {
+    gap: 0;
+}
+.hire-section .row > * {
+    width: 100%;
+}
+.hire-section [type="file"] {
+    display: inline-block;
+    width: auto;
+    background-color: transparent;
+    border: none;
+    padding-left: 0;
+}
+/* Thank You Page */
+.thank-section .thank {
+    background-color: var(--gray-color);
+    border-radius: var(--rounded-corner);
+    text-align: center;
+    margin: 2rem auto;
+    width: 90%;
+    padding: 2rem;
+}
+.thank-section .container div:last-of-type {
+    width: 100%;
+    text-align: center;
+}
 
 @media (min-width: 576px) {
     .container {
         width: 540px;
+    }
+    /* Hire Me Page */
+    .hire-section .container {
+        margin: 1rem auto;
+        border-radius: var(--rounded-corner);
     }
 }
 @media (min-width: 768px) {
@@ -520,6 +565,13 @@ input:focus , textarea:focus {
     .social-icons {
         justify-content: flex-end;
     }
+    /* Hire Me Page */
+    .hire-section .container {
+        padding: 1.5rem;
+    }
+    .hire-section .row {
+        gap: 1.5rem;
+    }
 }
 @media (min-width: 992px) {
     /* Utility Classes */
@@ -562,6 +614,11 @@ input:focus , textarea:focus {
     .contact-section .card {
         width: 400px;
         margin: 0 auto;
+    }
+    /* Hire Me Page */
+    .hire-section .container {
+        width: 700px;
+        margin-top: 3rem;
     }
 }
 @media (min-width: 1200px) {

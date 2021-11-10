@@ -49,32 +49,32 @@ function scrollNav() {
 window.addEventListener('scroll' , scrollNav);
 
 // Hire Me Popup
-const popupBtn = document.querySelector('.popup-btn');
-const popupBtn2 = document.querySelector('.hero-popup-btn');
-const crossBtn = document.querySelector('.fa-times-circle');
-const popup = document.querySelector('.popup');
-const popupBox = document.querySelector('.popup-box');
+// const popupBtn = document.querySelector('.popup-btn');
+// const popupBtn2 = document.querySelector('.hero-popup-btn');
+// const crossBtn = document.querySelector('.fa-times-circle');
+// const popup = document.querySelector('.popup');
+// const popupBox = document.querySelector('.popup-box');
 
-function activePopup() {
-    popup.classList.add('popup-active');
-}
-popupBtn.addEventListener('click' , activePopup);
-popupBtn2.addEventListener('click' , activePopup);
+// function activePopup() {
+//     popup.classList.add('popup-active');
+// }
+// popupBtn.addEventListener('click' , activePopup);
+// popupBtn2.addEventListener('click' , activePopup);
 
-function closePopup() {
-    popup.classList.remove('popup-active');
-}
-crossBtn.addEventListener('click' , closePopup);
+// function closePopup() {
+//     popup.classList.remove('popup-active');
+// }
+// crossBtn.addEventListener('click' , closePopup);
 
-function eClosePopup(e) {
-    if(popupBox.contains(e.target) + popupBtn.contains(e.target) + popupBtn2.contains(e.target)) {
+// function eClosePopup(e) {
+//     if(popupBox.contains(e.target) + popupBtn.contains(e.target) + popupBtn2.contains(e.target)) {
 
-    }
-    else {
-        return closePopup();
-    }
-}
-window.addEventListener('click' , eClosePopup);
+//     }
+//     else {
+//         return closePopup();
+//     }
+// }
+// window.addEventListener('click' , eClosePopup);
 
 // Swiper JS
 const swiper = new Swiper('.swiper', {
