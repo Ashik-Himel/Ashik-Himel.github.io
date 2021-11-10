@@ -11,7 +11,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/style.css">
 </head>
-<body>
+<body id="hire-body">
     <main class="hire-section">
         <div class="container">
             <div class="title-area">
@@ -34,28 +34,17 @@
                     <input type="text" name="project" id="project" placeholder="Enter Project Title" required>
                     <label for="description">Project Description</label>
                     <textarea name="description" id="description" rows="6" placeholder="Describe Your Project" required></textarea>
-                    <input type="file" name="attachment" id="attachment" multiple>
+                    <input type="file" name="attachment" id="attachment" accept="image/png, image/jpeg" multiple>
 
                     <input type="hidden" name="_subject" value="Hire Offer from Website!">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="portfolio-ashik-himel.netlify.app/pages/thank-you.html">
 
                     <button type="submit" class="btn">Send Offer <i class="fas fa-paper-plane"></i></button>
                 </form>
             </div>
         </div>
     </main>
-
-    <script>
-        $.ajax({
-            url: "https://formsubmit.co/ajax/ashikujjamanhimel@gmail.com",
-            method: "POST",
-            data: {
-                name: "FormSubmit",
-                message: "I'm from Devro LABS"
-            },
-            dataType: "json"
-        });
-    </script>
 </body>
 </html>

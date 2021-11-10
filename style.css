@@ -449,6 +449,9 @@ button {
     gap: 1rem;
 }
 /* Hire Me Page */
+body#hire-body {
+    background-color: var(--gray-color);
+}
 .hire-section .container {
     background-color: var(--gray-color);
     padding: 1rem;
@@ -488,6 +491,9 @@ button {
         width: 540px;
     }
     /* Hire Me Page */
+    body#hire-body {
+        background-color: var(--dark-color);
+    }
     .hire-section .container {
         margin: 1rem auto;
         border-radius: var(--rounded-corner);
