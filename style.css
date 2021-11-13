@@ -77,6 +77,8 @@ input:focus , textarea:focus {
 button {
     border: none;
     cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
 }
 /* Utility Classes */
 .container {
@@ -133,54 +135,6 @@ button {
     background: var(--dark-color) url(images/loading.svg) no-repeat center;
     z-index: 10;
 }
-/* Hire Me PopUp */
-/* .popup {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 7;
-    display: none;
-}
-.popup-box {
-    width: 90%;
-    height: auto;
-    padding: 3rem;
-    border-radius: var(--rounded-corner);
-    background-color: var(--gray-color);
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.popup-active {
-    display: block;
-}
-.popup-box .fa-times-circle {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 2rem;
-    color: var(--primary-color);
-    cursor: pointer;
-}
-.popup-box > .row {
-    gap: 0;
-}
-.popup-box > .row > * {
-    width: 100%;
-}
-.popup-box input, .popup-box textarea {
-    background-color: #3e3e3e;
-}
-.popup-box [type="file"] {
-    display: inline-block;
-    width: initial;
-    background-color: transparent;
-    border: none;
-} */
 /* Navigation Area */
 .nav-section {
     padding: 1rem;
@@ -511,13 +465,6 @@ body#hire-body {
         width: 50%;
         margin: 0 auto;
     }
-    /* Hire Me Popup */
-    .popup-box {
-        width: 600px;
-    }
-    .popup-box > .row {
-        gap: 1.5rem;
-    }
     /* Hero Section */
     .hero-section {
         margin-top: 4rem;
@@ -584,10 +531,7 @@ body#hire-body {
     .container {
         width: 960px;
     }
-    /* Hire Me PopUp */
-    .popup-box {
-        width: 700px;
-    }
+    /* Navigation Area */
     .hamburger {
         display: none;
     }

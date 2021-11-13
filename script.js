@@ -48,33 +48,25 @@ function scrollNav() {
 }
 window.addEventListener('scroll' , scrollNav);
 
-// Hire Me Popup
-// const popupBtn = document.querySelector('.popup-btn');
-// const popupBtn2 = document.querySelector('.hero-popup-btn');
-// const crossBtn = document.querySelector('.fa-times-circle');
-// const popup = document.querySelector('.popup');
-// const popupBox = document.querySelector('.popup-box');
+// Messenger Chat Plugin
+var chatbox = document.getElementById('fb-customer-chat');
+chatbox.setAttribute("page_id", "105351811966153");
+chatbox.setAttribute("attribution", "biz_inbox");
 
-// function activePopup() {
-//     popup.classList.add('popup-active');
-// }
-// popupBtn.addEventListener('click' , activePopup);
-// popupBtn2.addEventListener('click' , activePopup);
+window.fbAsyncInit = function() {
+FB.init({
+    xfbml            : true,
+    version          : 'v12.0'
+});
+};
 
-// function closePopup() {
-//     popup.classList.remove('popup-active');
-// }
-// crossBtn.addEventListener('click' , closePopup);
-
-// function eClosePopup(e) {
-//     if(popupBox.contains(e.target) + popupBtn.contains(e.target) + popupBtn2.contains(e.target)) {
-
-//     }
-//     else {
-//         return closePopup();
-//     }
-// }
-// window.addEventListener('click' , eClosePopup);
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
 
 // Swiper JS
 const swiper = new Swiper('.swiper', {
