@@ -74,6 +74,12 @@ input:focus , textarea:focus {
     font-weight: 400;
     font-size: 1rem;
 }
+input:not(:placeholder-shown), textarea:not(:placeholder-shown) {
+    background-color: var(--light-color) !important;
+}
+input[type="file"] {
+    background-color: initial !important;
+}
 button {
     border: none;
     cursor: pointer;
