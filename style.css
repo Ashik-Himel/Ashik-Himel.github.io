@@ -2,16 +2,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 :root {
     --primary-color: #ff4500;
-    --secondary-color: #d35400;
-    --dark-color: #000000;
-    --light-color: #ffffff;
-    --gray-color: #2e2e2e;
+    --secondary-color: #F28C28;
+    --bg-color: #fff;
+    --text-color: #000;
+    --bg-color-alt: #fff;
     --rounded-corner: 0.5rem;
+}
+.dark:root {
+    --bg-color: #000;
+    --text-color: #fff;
+    --bg-color-alt: #2e2e2e;
 }
 * , *::before , *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+body::-webkit-scrollbar-track {
+    background-color: #d9d9d9;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 4px;
 }
 html {
     scroll-behavior: smooth;
@@ -20,8 +35,8 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    background-color: var(--dark-color);
-    color: var(--light-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 body#home {
     overflow: hidden;
@@ -38,7 +53,7 @@ p {
 }
 a {
     text-decoration: none;
-    color: var(--light-color);
+    color: var(--text-color);
 }
 img {
     max-width: 75%;
@@ -56,8 +71,10 @@ label {
     margin-bottom: 0.5rem;
 }
 input, textarea {
-    background-color: var(--gray-color);
-    border: 1px solid hsla(0, 0%, 100%, 0.4);
+	font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    background-color: var(--bg-color-alt);
+    border: 1px solid rgba(0, 0, 0, 0.3);
     padding: 12px;
     border-radius: 5px;
     margin-bottom: 1rem;
@@ -67,7 +84,7 @@ textarea {
 }
 input:focus , textarea:focus {
     outline: none;
-    background-color: var(--light-color) !important;
+    background-color: #f9f9f9 !important;
 }
 ::placeholder {
     font-family: 'Poppins', sans-serif;
@@ -75,7 +92,7 @@ input:focus , textarea:focus {
     font-size: 1rem;
 }
 input:not(:placeholder-shown), textarea:not(:placeholder-shown) {
-    background-color: var(--light-color) !important;
+    background-color: #f9f9f9 !important;
 }
 input[type="file"] {
     background-color: initial !important;
@@ -111,10 +128,10 @@ button {
 .btn {
     display: inline-block;
     background-color: var(--primary-color);
-    color: var(--light-color);
+    color: #fff !important;
     padding: 0.5rem 1rem;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease !important;
 }
 .btn:hover {
     background-color: var(--secondary-color);
@@ -138,23 +155,23 @@ button {
     bottom: 0;
     left: 0;
     right: 0;
-    background: var(--dark-color) url(images/loading.svg) no-repeat center;
+    background: var(--bg-color) url(images/loading.svg) no-repeat center;
     z-index: 10;
 }
 /* Navigation Area */
 .nav-section {
     padding: 1rem;
-    background-color: var(--dark-color);
+    background-color: var(--bg-color);
     position: sticky;
     top: 0;
     z-index: 6;
     transition: background-color 0.3s ease;
 }
 .nav-sticky, .show-nav, .nav-sticky .navigation, .show-nav .navigation {
-    background-color: var(--gray-color);
+    background-color: var(--bg-color-alt);
 }
 .nav-sticky {
-    box-shadow: 0px 5px 50px var(--dark-color);
+    box-shadow: 0px 0px 15px 0px #000;
 }
 .nav-section .container {
     display: flex;
@@ -171,7 +188,7 @@ button {
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    background-color: var(--dark-color);
+    background-color: var(--bg-color);
     position: absolute;
     top: 100%;
     left: 0;
@@ -182,9 +199,12 @@ button {
 }
 .show-nav .navigation {
     height: 400px;
-    box-shadow: 0px 50px 50px -40px var(--dark-color);
+    box-shadow: 0px 35px 40px -20px #000;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
+}
+.navigation i {
+    display: none;
 }
 .nav-link {
     text-transform: uppercase;
@@ -194,7 +214,17 @@ button {
     color: var(--primary-color);
 }
 .nav-link.btn {
-    color: var(--light-color);
+    color: var(--text-color);
+}
+.hamburger-section {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+.hamburger-section i, .navigation i {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    cursor: pointer;
 }
 .hamburger {
     display: flex;
@@ -275,7 +305,7 @@ button {
     width: 100%;
     height: 12px;
     border-radius: 5px;
-    background-color: var(--light-color);
+    background-color: #d9d9d9;
     margin-bottom: 1.5rem;
 }
 .progress {
@@ -287,9 +317,10 @@ button {
 }
 /* Services Section */
 .card {
-    background-color: var(--gray-color);
+    background-color: var(--bg-color-alt);
     padding: 2rem;
     border-radius: var(--rounded-corner);
+    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.4);
     position: relative;
     z-index: 1;
 }
@@ -309,12 +340,12 @@ button {
     border-radius: inherit;
 }
 .card:hover * {
-    color: var(--light-color);
+    color: #fff;
     transition: color 0.5s ease, background-color 0.5s ease;
 }
 .card:hover .btn , .card:hover .btn i {
-    background-color: var(--light-color);
-    color: var(--primary-color);
+    background-color: #fff;
+    color: var(--primary-color) !important;
 }
 .card > i {
     color: var(--primary-color);
@@ -346,7 +377,7 @@ button {
     display: none;
 }
 .swiper-pagination-bullet {
-    background-color: var(--light-color);
+    background-color: var(--text-color);
     transition: width 0.3s ease;
 }
 .swiper-pagination-bullet-active {
@@ -356,6 +387,7 @@ button {
 /* Banner Section */
 .banner-section .row {
     background-color: var(--primary-color);
+    color: #fff;
     border-radius: var(--rounded-corner);
     padding: 2rem;
 }
@@ -363,8 +395,8 @@ button {
     font-size: 2rem;
 }
 .banner-section .btn {
-    background-color: var(--light-color);
-    color: var(--primary-color);
+    background-color: #fff;
+    color: var(--primary-color) !important;
 }
 .banner-section img {
     width: 50%;
@@ -385,7 +417,7 @@ button {
     transition: color 0.5s ease;
 }
 .contact-section .card:hover span {
-    color: var(--light-color);
+    color: #fff;
 }
 .contact-section .card a {
     text-decoration: underline;
@@ -393,6 +425,7 @@ button {
 /* Footer Section */
 .footer-section {
     background-color: var(--primary-color);
+    color: #fff;
     padding: 1.5rem;
     text-align: center;
     border-top-left-radius: 1rem;
@@ -408,16 +441,19 @@ button {
     display: flex;
     gap: 1rem;
 }
+.social-icons i {
+    color: #fff;
+}
 /* Hire Me Page */
 body#hire-body {
-    background-color: var(--gray-color);
+    background-color: var(--bg-color);
 }
 .hire-section .container {
-    background-color: var(--gray-color);
+    background-color: var(--bg-color-alt);
     padding: 1rem;
 }
 .hire-section input, .hire-section textarea {
-    background-color: #3e3e3e;
+    background-color: var(--bg-color-alt);
 }
 .hire-section .row {
     gap: 0;
@@ -434,7 +470,8 @@ body#hire-body {
 }
 /* Thank You Page */
 .thank-section .thank {
-    background-color: var(--gray-color);
+    background-color: var(--bg-color-alt);
+    border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: var(--rounded-corner);
     text-align: center;
     margin: 2rem auto;
@@ -452,7 +489,7 @@ body#hire-body {
     }
     /* Hire Me Page */
     body#hire-body {
-        background-color: var(--dark-color);
+        background-color: var(--bg-color);
     }
     .hire-section .container {
         margin: 1rem auto;
@@ -507,7 +544,7 @@ body#hire-body {
         display: block;
     }
     .swiper-button-prev::after, .swiper-button-next::after {
-        color: var(--light-color);
+        color: var(--text-color);
     }
     /* Contact Section */
     .contact-section .container > .row {
@@ -538,9 +575,6 @@ body#hire-body {
         width: 960px;
     }
     /* Navigation Area */
-    .hamburger {
-        display: none;
-    }
     .nav-section {
         margin-top: 0.5rem;
     }
@@ -549,6 +583,12 @@ body#hire-body {
         position: static;
         flex-direction: row;
         gap: 1rem;
+    }
+    .navigation i {
+        display: block;
+    }
+    .hamburger-section {
+        display: none;
     }
     /* Services Section */
     .services-section .row {
@@ -574,7 +614,7 @@ body#hire-body {
     /* Hire Me Page */
     .hire-section .container {
         width: 700px;
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
 }
 @media (min-width: 1200px) {

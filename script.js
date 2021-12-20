@@ -48,6 +48,16 @@ function scrollNav() {
 }
 window.addEventListener('scroll' , scrollNav);
 
+//Theme Toggle
+const themeToggler = document.querySelectorAll('.theme-toggler');
+const theme = document.querySelector(".root");
+function themeToggle() {
+    themeToggler.forEach(n => n.classList.toggle('fa-moon'));
+    themeToggler.forEach(n => n.classList.toggle('fa-sun'));
+    theme.classList.toggle('dark');
+}
+themeToggler.forEach(n => n.addEventListener('click' , themeToggle))
+
 // Messenger Chat Plugin
 var chatbox = document.getElementById('fb-customer-chat');
 chatbox.setAttribute("page_id", "105351811966153");
