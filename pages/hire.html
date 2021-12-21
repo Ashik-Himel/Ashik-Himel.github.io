@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="root">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,38 +12,61 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body id="hire-body">
-    <main class="hire-section">
-        <div class="container">
-            <div class="title-area">
-                <h2><span class="text-primary">Hire</span> Me</h2>
-                <p>Hire me for your upcomming project</p>
-            </div>
-            <div>
-                <form action="https://formsubmit.co/ashikujjamanhimel@gmail.com" method="post" enctype="multipart/form-data">
-                    <div class="row">
-                        <div>
-                            <label for="name">Your Name</label>
-                            <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
-                        </div>
-                        <div>
-                            <label for="email">Your Email</label>
-                            <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
-                        </div>
-                    </div>
-                    <label for="project">Project Title</label>
-                    <input type="text" name="project" id="project" placeholder="Enter Project Title" required>
-                    <label for="description">Project Description</label>
-                    <textarea name="description" id="description" rows="6" placeholder="Describe Your Project" required></textarea>
-                    <input type="file" name="attachment" id="attachment">
-                    <button type="submit" class="btn">Send Offer <i class="fas fa-paper-plane"></i></button>
-
-                    <input type="hidden" name="_subject" value="Hire Offer from Website!">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="https://dev.zihadshoe.com/pages/thank-you.html">
-                </form>
-            </div>
+<main class="hire-section">
+    <div class="container">
+        <a href="/index.html"><i class="go-back fa fa-arrow-left"></i></a>
+        <div class="title-area">
+            <h2><span class="text-primary">Hire</span> Me</h2>
+            <p>Hire me for your upcomming project</p>
         </div>
-    </main>
+        <div>
+            <form action="https://formsubmit.co/ashikujjamanhimel@gmail.com" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div>
+                        <label for="name">Your Name</label>
+                        <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+                    </div>
+                    <div>
+                        <label for="email">Your Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <label for="project">Project Title</label>
+                        <input type="text" name="project" id="project" placeholder="Enter Project Title" required>
+                    </div>
+                    <div>
+                        <label for="budget">Budget</label>
+                        <input type="text" name="budget" id="budget" placeholder="Your Project Budget" required>
+                    </div>
+                </div>
+                <label for="description">Project Description</label>
+                <textarea name="description" id="description" rows="6" placeholder="Describe Your Project" required></textarea>
+                <input type="file" name="attachment" id="attachment">
+                <button type="submit" class="btn">Send Offer <i class="fas fa-paper-plane"></i></button>
+
+                <input type="hidden" name="_subject" value="Hire Offer from Website!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://dev.zihadshoe.com/pages/thank-you.html">
+            </form>
+        </div>
+    </div>
+</main>
+
+<script>
+    const theme = document.querySelector(".root");
+    let checkThemeValue = localStorage.getItem('themeValue');
+    if(checkThemeValue == '0') {
+        theme.classList.remove('dark');
+    }
+    if(checkThemeValue == '1') {
+        theme.classList.add('dark');
+    }
+    else {
+        theme.classList.remove('dark');
+    }
+</script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="root">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,16 +12,30 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <main class="thank-section">
-        <div class="container">
-            <div class="thank">
-                <h2><span class="text-primary">Thank</span> You!</h2>
-                <p>Thank you for submiting this form. We'll contact with you as soon as possible.</p>
-            </div>
-            <div>
-                <a href="/" class="btn">Return Home <i class="fas fa-share-square"></i></a>
-            </div>
+<main class="thank-section">
+    <div class="container">
+        <div class="thank">
+            <h2><span class="text-primary">Thank</span> You!</h2>
+            <p>Thank you for submiting this form. We'll contact with you as soon as possible.</p>
         </div>
-    </main>
+        <div>
+            <a href="/" class="btn">Return Home <i class="fas fa-share-square"></i></a>
+        </div>
+    </div>
+</main>
+
+<script>
+    const theme = document.querySelector(".root");
+    let checkThemeValue = localStorage.getItem('themeValue');
+    if(checkThemeValue == '0') {
+        theme.classList.remove('dark');
+    }
+    if(checkThemeValue == '1') {
+        theme.classList.add('dark');
+    }
+    else {
+        theme.classList.remove('dark');
+    }
+</script>
 </body>
 </html>

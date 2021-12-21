@@ -165,7 +165,6 @@ button {
     position: sticky;
     top: 0;
     z-index: 6;
-    transition: background-color 0.3s ease;
 }
 .nav-sticky, .show-nav, .nav-sticky .navigation, .show-nav .navigation {
     background-color: var(--bg-color-alt);
@@ -195,7 +194,7 @@ button {
     right: 0;
     height: 0;
     overflow: hidden;
-    transition: height 0.3s ease , background-color 0.3s ease;
+    transition: height 0.3s ease;
 }
 .show-nav .navigation {
     height: 400px;
@@ -449,8 +448,22 @@ body#hire-body {
     background-color: var(--bg-color);
 }
 .hire-section .container {
-    background-color: var(--bg-color-alt);
+    background-color: var(--bg-color);
+    border: 1px solid rgba(0, 0, 0, 0.3);
     padding: 1rem;
+    position: relative;
+}
+.hire-section .go-back {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    padding: 11px 0px 0px 9px;
+    background-color: var(--primary-color);
+    color: #fff;
+    position: absolute;
+    left: 1.2rem;
+    top: 1.2rem;
 }
 .hire-section input, .hire-section textarea {
     background-color: var(--bg-color-alt);
@@ -492,6 +505,7 @@ body#hire-body {
         background-color: var(--bg-color);
     }
     .hire-section .container {
+        background-color: var(--bg-color-alt);
         margin: 1rem auto;
         border-radius: var(--rounded-corner);
     }

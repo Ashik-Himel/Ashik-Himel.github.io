@@ -48,15 +48,48 @@ function scrollNav() {
 }
 window.addEventListener('scroll' , scrollNav);
 
-//Theme Toggle
+// Theme Toggler
 const themeToggler = document.querySelectorAll('.theme-toggler');
 const theme = document.querySelector(".root");
-function themeToggle() {
-    themeToggler.forEach(n => n.classList.toggle('fa-moon'));
-    themeToggler.forEach(n => n.classList.toggle('fa-sun'));
-    theme.classList.toggle('dark');
+
+function darkOn() {
+    themeToggler.forEach(n => n.classList.remove('fa-moon'));
+    themeToggler.forEach(n => n.classList.add('fa-sun'));
+    theme.classList.add('dark');
 }
-themeToggler.forEach(n => n.addEventListener('click' , themeToggle))
+function darkOff() {
+    themeToggler.forEach(n => n.classList.add('fa-moon'));
+    themeToggler.forEach(n => n.classList.remove('fa-sun'));
+    theme.classList.remove('dark');
+}
+
+let checkThemeValue = localStorage.getItem('themeValue');
+if(checkThemeValue == '0') {
+    darkOff();
+}
+if(checkThemeValue == '1') {
+    darkOn();
+}
+else {
+    darkOff();
+}
+
+function themeChanger() {
+    let checkThemeValue = localStorage.getItem('themeValue');
+    if(checkThemeValue == '0') {
+        localStorage.setItem('themeValue' , '1');
+        darkOn();
+    }
+    if(checkThemeValue == '1') {
+        localStorage.setItem('themeValue' , '0');
+        darkOff();
+    }
+    else {
+        localStorage.setItem('themeValue' ,  '1');
+        darkOn();
+    }
+}
+themeToggler.forEach(n => n.addEventListener('click' , themeChanger));
 
 // Messenger Chat Plugin
 var chatbox = document.getElementById('fb-customer-chat');
@@ -93,4 +126,4 @@ const swiper = new Swiper('.swiper', {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-  })
+  });
