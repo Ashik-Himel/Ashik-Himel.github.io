@@ -127,3 +127,33 @@ const swiper = new Swiper('.swiper', {
       prevEl: '.swiper-button-prev',
     },
   });
+
+// Popup
+const service1Btn = document.querySelector('.service1-btn');
+const service2Btn = document.querySelector('.service2-btn');
+const service3Btn = document.querySelector('.service3-btn');
+const service1Popup = document.querySelector('.service1-popup');
+const service2Popup = document.querySelector('.service2-popup');
+const service3Popup = document.querySelector('.service3-popup');
+const popupBox = document.querySelectorAll('.popup');
+const popupCross = document.querySelectorAll('.popup-cross');
+
+function popupOpen1() {
+    service1Popup.style.display = 'block';
+}
+service1Btn.addEventListener('click' , popupOpen1);
+function popupOpen2() {
+    service2Popup.style.display = 'block';
+}
+service2Btn.addEventListener('click' , popupOpen2);
+function popupOpen3() {
+    service3Popup.style.display = 'block';
+}
+service3Btn.addEventListener('click' , popupOpen3);
+
+function popupClose() {
+    service1Popup.style.display = 'none';
+    service3Popup.style.display = 'none';
+    service2Popup.style.display = 'none';
+}
+popupCross.forEach(n => n.addEventListener('click' , popupClose));

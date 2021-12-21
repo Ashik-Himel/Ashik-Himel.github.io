@@ -443,6 +443,53 @@ button {
 .social-icons i {
     color: #fff;
 }
+/* Popups */
+.popup-section {
+    position: fixed;
+    top: -80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    padding: 0 1rem;
+}
+.popup {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bg-color-alt);
+    border: 2px solid #111111;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.6);
+    border-radius: var(--rounded-corner);
+}
+.popup-cross {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 5px 0px 0px 8px;
+    font-size: 1.2rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+}
+.popup .popup-title {
+    color: var(--primary-color);
+    padding: 1rem 1rem 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+.popup .popup-body {
+    padding: 1rem;
+}
+.popup-body p {
+    margin-bottom: 0.8rem;
+}
 /* Hire Me Page */
 body#hire-body {
     background-color: var(--bg-color);
@@ -498,6 +545,10 @@ body#hire-body {
 
 @media (min-width: 576px) {
     .container {
+        width: 540px;
+    }
+    /* Popups */
+    .popup {
         width: 540px;
     }
     /* Hire Me Page */
