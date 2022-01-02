@@ -103,6 +103,10 @@ button {
     font-family: inherit;
     font-size: 1rem;
 }
+::selection {
+    background-color: var(--primary-color);
+    color: #fff;
+}
 /* Utility Classes */
 .container {
     width: 100%;
