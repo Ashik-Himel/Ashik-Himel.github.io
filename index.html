@@ -1,362 +1,526 @@
 <!DOCTYPE html>
-<html lang="en" class="root">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashik-Himel :: Front-End Developer</title>
-    <link rel="shortcut icon" href="images/site-icon.png" type="image/x-icon">
-    <!-- FontAwesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Swiper JS Slider -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.2.0/swiper-bundle.min.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashik-Himel :: Frontend Web Developer</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- Fontawesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body id="home">
-<!-- Preloader -->
-<div class="loading"></div>
-<!-- Navigation Section -->
-<nav class="nav-section">
-    <div class="container">
-        <a href="#brand" class="nav-brand">Ashik-<span class="text-primary">Himel</span></a>
-        <ul class="navigation">
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#about" class="nav-link">About Me</a></li>
-            <li><a href="#skills" class="nav-link">My Skills</a></li>
-            <li><a href="#services" class="nav-link">Services</a></li>
-            <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-            <li><a href="#contact" class="nav-link">Contact Me</a></li>
-            <li><a href="pages/hire.html" class="nav-link btn popup-btn">Hire Me</a></li>
-            <li><i class="theme-toggler fas fa-moon"></i></li>
-        </ul>
-        <div class="hamburger-section">
-            <i class="theme-toggler fas fa-moon"></i>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body
+    id="home"
+    data-bs-spy="scroll"
+    data-bs-target="#navbar"
+    data-bs-offset="50"
+  >
+    <!-- Header Section -->
+    <header class="header-section">
+      <div class="container-box">
+        <a href="#home" class="logo"
+          >Ashik-<span class="colored-text">Himel</span></a
+        >
+        <div class="nav-area">
+          <div class="nav-profile">
+            <img src="assets/images/my-photo.png" alt="My Photo" />
+            <h3>Ashik-<span class="colored-text">Himel</span></h3>
+            <span>Frontend Web Developer</span>
+          </div>
+          <nav class="nav-section" id="navbar">
+            <ul id="nav-pills">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#educations">Educations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#works">My Works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact Me</a>
+              </li>
+            </ul>
+            <div class="nav-social">
+              <a href="http://www.github.com/ashik-himel" target="_blank"
+                ><img src="assets/images/github.png" alt="Github Icon" /></a
+              ><a href="http://www.linkedin.com/in/ashik-himel" target="_blank"
+                ><img src="assets/images/linkedin.png" alt="Linkedin Icon" /></a
+              ><a
+                href="http://mailto:ashikujjamanhimel@gmail.com"
+                target="_blank"
+                ><img src="assets/images/mail.png" alt="Email Icon"
+              /></a>
             </div>
+          </nav>
         </div>
-    </div>
-</nav>
-<!-- Hero Section -->
-<header class="hero-section">
-    <div class="container row">
-        <div>
-            <img src="images/my-photo.png" alt="My Photo">
+        <div class="header-icons">
+          <i class="fa-solid fa-sun"></i>
+          <div class="nav-toggler">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
-        <div>
-            <h1>I'm Ashik-<span class="text-primary">Himel</span><br><span class="text-primary">Front-End</span> Developer</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, reiciendis! Voluptate consequuntur voluptates veritatis dolores.</p>
-            <a href="pages/hire.html" class="btn hero-popup-btn">Hire Me <i class="fa fa-arrow-right"></i></a>
-            <a href="#about" class="btn-alt"><i class="fas fa-mouse"></i> Scroll Down <i class="fa fa-arrow-down"></i></a>
-        </div>
-    </div>
-</header>
-<!-- About Section -->
-<section class="about-section" id="about">
-    <div class="container">
-        <div class="title-area">
-            <h2><span class="text-primary">About</span> Me</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat odit iusto labore?</p>
-        </div>
-        <div class="row">
-            <div>
-                <img src="images/about-me.png" alt="About Me">
-            </div>
-            <div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate repellat assumenda, atque tenetur aliquid officia corporis quaerat modi minus sunt.</p>
-                <div class="icon-boxes">
-                   <div>
-                       <h1>02+</h1>
-                       <p>Years<br>experience</p>
-                   </div> 
-                   <div>
-                       <h1>50+</h1>
-                       <p>Project<br>completed</p>
-                   </div>
-                   <div>
-                       <h1>15+</h1>
-                       <p>Happy<br>clients</p>
-                   </div>
-                </div>
-                <a href="files/Ashik_Himel(CV).pdf" class="btn" download="">Download CV <i class="fa fa-download"></i></a>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Skills Section -->
-<section class="skills-section" id="skills">
-    <div class="container">
-        <div class="title-area">
-            <h2>My <span class="text-primary">Skills</span></h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima fuga optio ducimus.</p>
-        </div>
-        <div class="row">
-            <div>
-                <div>
-                    <div class="progress-title">
-                        <span>HTML</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div>
-                    <div class="progress-title">
-                        <span>CSS</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div>
-                    <div class="progress-title">
-                        <span>Bootstrap</span>
-                        <span>85%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <div class="progress-title">
-                        <span>JavaScript</span>
-                        <span>75%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%;"></div>
-                    </div>
-                </div>
-                <div>
-                    <div class="progress-title">
-                        <span>jQuery</span>
-                        <span>70%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 70%;"></div>
-                    </div>
-                </div>
-                <div>
-                    <div class="progress-title">
-                        <span>React JS</span>
-                        <span>85%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Services Section -->
-<section class="services-section" id="services">
-    <div class="container">
-        <div class="title-area">
-            <h2>My <span class="text-primary">Services</span></h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sit accusamus amet!</p>
-        </div>
-        <div class="row">
-            <div>
-                <div class="card">
-                    <i class="fas fa-code"></i>
-                    <h2>Website Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quae adipisci dolorum!</p>
-                    <a href="#service1" class="btn service1-btn">See More <i class="fa fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div>
-                <div class="card">
-                    <i class="fas fa-image"></i>
-                    <h2>UI/UX Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quae adipisci dolorum!</p>
-                    <a href="#service2" class="btn service2-btn">See More <i class="fa fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div>
-                <div class="card">
-                    <i class="fab fa-wordpress"></i>
-                    <h2>WordPress</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quae adipisci dolorum!</p>
-                    <a href="#service3" class="btn service3-btn">See More <i class="fa fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Portfolio Section -->
-<section class="portfolio-section" id="portfolio">
-    <div class="container">
-        <div class="title-area">
-            <h2>My <span class="text-primary">Portfolio</span></h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste expedita perspiciatis incidunt!</p>
-        </div>
-        <div class="row">
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="row">
-                        <div>
-                            <img src="images/portfolio.jpg" alt="Portfolio Item">
-                        </div>
-                        <div>
-                            <h2>Portfolio Landing Page</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, aliquid.</p>
-                            <a href="#portfolio" class="btn">View Demo</a>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="row">
-                        <div>
-                            <img src="images/portfolio.jpg" alt="Portfolio Item">
-                        </div>
-                        <div>
-                            <h2>Portfolio Landing Page</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, aliquid.</p>
-                            <a href="#portfolio" class="btn">View Demo</a>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="row">
-                        <div>
-                            <img src="images/portfolio.jpg" alt="Portfolio Item">
-                        </div>
-                        <div>
-                            <h2>Portfolio Landing Page</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, aliquid.</p>
-                            <a href="#portfolio" class="btn">View Demo</a>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Banner Section -->
-<section class="banner-section">
-    <div class="container">
-        <div class="row">
-            <div>
-                <h2>Have a Project? Contact Me.</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque corrupti assumenda ipsum culpa. Sint, dicta? Id facere laboriosam ipsum quae.</p>
-                <a href="mailto:ashikujjamanhimel@gmail.com" class="btn">Send Email <i class="fas fa-paper-plane"></i></a>
-            </div>
-            <div>
-                <img src="images/mobile.png" alt="Mobile Image">
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Contact Section -->
-<section class="contact-section" id="contact">
-    <div class="container">
-        <div class="title-area">
-            <h2><span class="text-primary">Contact</span> Me</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore neque laudantium perspiciatis.</p>
-        </div>
-        <div class="row">
-            <div>
-                <div class="card">
-                    <i class="fas fa-id-card"></i>
-                    <p><span>Facebook:</span> <a href="https://www.facebook.com/ashikujjaman.himel" target="_blank">Ashikujjaman Himel</a></p>
-                    <p><span>Email:</span> <a href="mailto:ashikujjamanhimel@gmail.com" target="_blank">ashikujjamanhimel@gmail.com</a></p>
-                    <p><span>WhatsApp:</span> <a href="https://wa.me/+8801770473899" target="_blank">+880 1770 473899</a></p>
-                    <p><span>Mobile:</span> <a href="tel:+8801770473899" target="_blank">+880 1770 473899</a></p>
-                </div>
-            </div>
-            <div>
-                <form action="https://formsubmit.co/aaf71b51111d57eb494eb3ca0e5ca21c" method="post">
-                    <div class="row">
-                        <div>
-                            <label for="name">Your Name</label>
-                            <input type="text" name="name" id="name" placeholder="Enter Your Name">
-                        </div>
-                        <div>
-                            <label for="email">Your Email</label>
-                            <input type="email" name="email" id="email" placeholder="Enter Your Email">
-                        </div>
-                    </div>
-                    <label for="subject">Subject</label>
-                    <input type="text" name="subject" id="subject" placeholder="Enter Subject">
-                    <label for="body">Your Massage</label>
-                    <textarea name="body" id="body" rows="8" placeholder="Enter Your Massage"></textarea>
-                    <button type="submit" class="btn">Send Massage <i class="fas fa-paper-plane"></i></button>
+      </div>
+    </header>
 
-                    <input type="hidden" name="_subject" value="Contact from Website!">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="https://ashik-himel.github.io/portfolio_ashik-himel/pages/thank-you.html">
-                </form>
-            </div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container-box flex-box">
+        <div class="left-div">
+          <div class="hero-pre-title">
+            <span class="line"></span>
+            <span class="text">Hello</span>
+          </div>
+          <h1>I'm Ashik-<span class="colored-text">Himel</span></h1>
+          <h3>Frontend Web Developer</h3>
+          <p>
+            I'm from Dhaka, Bangladesh. I'm studying in B.Sc. in CSE in Uttara
+            University. I'm skilled in HTML, CSS, Sass, Bootstrap, Tailwind CSS,
+            JavaScript, React JS and so on. I'm providing Frontend Web
+            Developement services with 2 years of experience.
+          </p>
+          <div class="button-group">
+            <a href="#about" class="button"
+              >About Me <i class="fa-solid fa-arrow-right"></i
+            ></a>
+            <a href="#services" class="button button-alt"
+              >My Services <i class="fa-solid fa-gear"></i
+            ></a>
+          </div>
         </div>
-    </div>
-</section>
-<!-- Footer Section -->
-<footer class="footer-section">
-    <div class="container row">
-            <div>
-                <p>Copyright &copy; 2021, Ashik-Himel. All Right Reserved. </p>
-            </div>
-            <div>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/ashikujjaman.himel" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://wa.me/+8801770473899" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="mailto:ashikujjamanhimel@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-                    <a href="tel:+8801770473899" target="_blank"><i class="fas fa-phone-alt"></i></a>
-                </div>
-            </div>
-    </div>
-</footer>
-<!-- Popups -->
-<section class="popup-section service1-popup">
-    <main class="popup">
-        <i class="popup-cross fas fa-times"></i>
-        <h2 class="popup-title">Web Design</h2>
-        <div class="popup-body">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate ducimus, obcaecati commodi tempore iure nulla, ipsum perferendis quaerat quidem doloribus distinctio incidunt dolores esse officiis.</p>
-            <a href="pages/hire.html" class="btn">Hire Me <i class="fa fa-arrow-right"></i></a>
+        <div class="right-div">
+          <img src="assets/images/hero-image.png" alt="Hero Image" />
         </div>
-    </main>
-</section>
-<section class="popup-section service2-popup">
-    <main class="popup">
-        <i class="popup-cross fas fa-times"></i>
-        <h2 class="popup-title">UI/UX Desing</h2>
-        <div class="popup-body">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui soluta doloribus distinctio quisquam velit ipsa quam error accusamus blanditiis nulla quas consectetur, vero tenetur molestias?</p>
-            <a href="pages/hire.html" class="btn">Hire Me <i class="fa fa-arrow-right"></i></a>
-        </div>
-    </main>
-</section>
-<section class="popup-section service3-popup">
-    <main class="popup">
-        <i class="popup-cross fas fa-times"></i>
-        <h2 class="popup-title">WordPress</h2>
-        <div class="popup-body">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum distinctio, ea vitae nisi deleniti officiis doloribus sint amet. Sapiente labore, ipsum magni voluptate mollitia earum.</p>
-            <a href="pages/hire.html" class="btn">Hire Me <i class="fa fa-arrow-right"></i></a>
-        </div>
-    </main>
-</section>
-<!-- Messenger Chat Plugin -->
-<div id="fb-root"></div>
-<div id="fb-customer-chat" class="fb-customerchat"></div>
+      </div>
+    </section>
 
-<!-- Swiper JS Slider -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.2.0/swiper-bundle.min.js"></script>
-<!-- Custom JS -->
-<script src="script.js"></script>
-</body>
+    <!-- About Me Section -->
+    <section class="about-section" id="about">
+      <div class="container-box">
+        <h2><span class="colored-text">About</span> Me</h2>
+        <span>Here is a brief about myself that let you know who I am.</span>
+        <div class="flex-box">
+          <div class="left-div">
+            I am Ashik-Himel, Frontend Web Developer from Dhaka, Bangladesh. I
+            am studying in B.Sc. in CSE in Uttara University. I am skilled in
+            HTML, CSS, Sass, Bootstrap, Tailwind CSS, JavaScript, React JS and
+            so on. I am providing Frontend Web Developement services with
+            <span class="experience-year"></span> years of experiences. I have 1
+            year of experience in Account & eCommerce Manager at Zihad Shoe.
+            Thank you so much for visiting my portfolio.
+            <div class="about-info-box">
+              <div>
+                <span>0<span class="experience-year"></span>+</span>
+                <span>Years of<br />Experiences</span>
+              </div>
+              <div>
+                <span>100+</span>
+                <span>Projects<br />Completed</span>
+              </div>
+              <div>
+                <span>25+</span>
+                <span>Happy<br />Clients</span>
+              </div>
+            </div>
+            <div class="button-group">
+              <a
+                href="assets/files/Resume-of-Ashikujjaman-Himel.pdf"
+                class="button"
+                download=""
+                >Download CV <i class="fa-solid fa-cloud-arrow-down"></i
+              ></a>
+              <a href="#works" class="button button-alt"
+                >My Works <i class="fa-solid fa-code"></i
+              ></a>
+            </div>
+          </div>
+          <div class="right-div">
+            <img src="assets/images/my-photo.png" alt="My Photo" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Educations Section -->
+    <section class="educations-section" id="educations">
+      <div class="container-box">
+        <h2>My <span class="colored-text">Educations</span></h2>
+        <span
+          >Here is my education background that let you know where I was
+          attending for education.</span
+        >
+        <div class="educations-toggler">
+          <span class="education-toggler-button active">Educations</span>
+          <span class="course-toggler-button">Courses</span>
+        </div>
+        <div class="card-area">
+          <div class="educations-card active">
+            <div class="card-box">
+              <h3>B.Sc. in CSE</h3>
+              <span>Uttara University</span>
+              <hr />
+              <p>
+                I am studying in B.Sc in CSE in Uttara University. My expected
+                graduation year is 2026. My current CGPA 3.83.
+              </p>
+            </div>
+            <div class="card-box">
+              <h3>HSC</h3>
+              <span>Sreepur MRA College</span>
+              <hr />
+              <p>
+                I passed HSC from Sreepur MRA College in 2021. My board was
+                Dhaka. I got 4.17 out of 5 from Science.
+              </p>
+            </div>
+            <div class="card-box">
+              <h3>SSC</h3>
+              <span>Sreepur Pilot High School</span>
+              <hr />
+              <p>
+                I passed SSC from Sreepur Pilot High School in 2019. My board
+                was Dhaka. I got 4.56 out of 5 from Science.
+              </p>
+            </div>
+          </div>
+          <div class="courses-card">
+            <div class="card-box">
+              <h3>Frontend Web Dev.</h3>
+              <span>Programming Hero</span>
+              <hr />
+              <p>
+                I completed Frontend Web Developement course from Programming
+                Hero in 2023. My batch no. was 8.
+              </p>
+            </div>
+            <div class="card-box">
+              <h3>Full Stack Web Dev.</h3>
+              <span>Interactive Care</span>
+              <hr />
+              <p>
+                I completed Full Stack Web Developement course from Interactive
+                Care in 2021. My batch no. was 2.
+              </p>
+            </div>
+            <div class="card-box">
+              <h3>MS Office</h3>
+              <span>Digital Computer Academy</span>
+              <hr />
+              <p>
+                I completed Basic Computer Application (360 Hours) course from
+                Digital Computer Training Academy in 2020.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Job Experiences Section -->
+    <section class="experiences-section" id="experiences">
+      <div class="container-box">
+        <h2>Job <span class="colored-text">Experiences</span></h2>
+        <span>Here you will find where I am working and worked before.</span>
+        <div class="card-area">
+          <div class="experiences-card">
+            <div class="card-box">
+              <h3>eComm Manager</h3>
+              <span>Zihad Shoe</span>
+              <hr />
+              <p>
+                I worked as Account and eCommerce Manager in Zihad Shoe,
+                Sreepur, Gazipur from Nov, 2020 to Dec, 2021.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Skills Section -->
+
+    <!-- My Services Section -->
+    <section class="services-section" id="services">
+      <div class="container-box">
+        <h2>My <span class="colored-text">Services</span></h2>
+        <span>Here are given some services that I provide to my clients.</span>
+        <div class="card-area">
+          <div class="services-card">
+            <div class="card-box">
+              <h3>Website Design</h3>
+              <span>HTML, CSS, JavaScript</span>
+              <hr />
+              <p>
+                I can design website, clone website with pixel perfect and
+                responsively with HTML, CSS, Bootstrap, Tailwind CSS,
+                JavaScript.
+              </p>
+            </div>
+            <div class="card-box">
+              <h3>Single Page Design</h3>
+              <span>React JS</span>
+              <hr />
+              <p>
+                I can design website, clone website with pixel perfect and
+                responsively with React JS. In addition, I use JSX, CSS and
+                JavaScript.
+              </p>
+            </div>
+            <div class="card-box">
+              <h3>PSD to HTML</h3>
+              <span>HTML, CSS, JavaScript</span>
+              <hr />
+              <p>
+                I can convert PSD / Figma / Adobe XD to HTML with pixel perfect
+                and responsively with HTML, CSS, Bootstrap, Tailwind CSS,
+                JavaScript.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Works Section -->
+    <section class="works-section" id="works">
+      <div class="container-box">
+        <h2>My <span class="colored-text">Works</span></h2>
+        <span
+          >Here are some works that I completed recently for my clients.</span
+        >
+        <div class="card-area">
+          <div class="works-card">
+            <div class="works-card-box">
+              <div class="image-box">
+                <img src="assets/images/mediamax-1.png" alt="Media Max" />
+                <div class="portfolio-links">
+                  <a href="https://mediamax.com.bd" target="_blank"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="works-info">
+                <span>HTML, CSS, JavaScript</span>
+                <h3>
+                  Media Max - Authorized Distributor of Banglalink Digital
+                </h3>
+              </div>
+            </div>
+            <div class="works-card-box">
+              <div class="image-box">
+                <img
+                  src="assets/images/learn-with-ashik-himel-1.png"
+                  alt="Learn with Ashik-Himel"
+                />
+                <div class="portfolio-links">
+                  <a
+                    href="https://learn-with-ashik-himel.netlify.app"
+                    target="_blank"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="works-info">
+                <span>HTML, CSS, JavaScript</span>
+                <h3>Learn with Ashik-Himel :: Learn Programming Language</h3>
+              </div>
+            </div>
+            <div class="works-card-box">
+              <div class="image-box">
+                <img src="assets/images/asif-ahamed-1.png" alt="Asif Ahamed" />
+                <div class="portfolio-links">
+                  <a href="https://asifahamed.com" target="_blank"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="works-info">
+                <span>HTML, CSS, JavaScript</span>
+                <h3>
+                  Asif Ahamed :: Managing Director of Media Max, Media Link,
+                  etc.
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section class="banner-section" id="banner">
+      <div class="container-box">
+        <div class="flex-box">
+          <div class="left-div">
+            <h2>Have a Project? Contact Me!</h2>
+            <p>
+              If you liked my works and want to work with me to complete your
+              project, then I'm waiting for your message! You can directly
+              contact with me without any hasitate.
+            </p>
+            <a href="mailto:ashikujjamanhimel@gmail.com" class="button"
+              >Send Email <i class="fa-solid fa-paper-plane"></i
+            ></a>
+          </div>
+          <div class="right-div">
+            <img
+              src="assets/images/laptop-email-illustration.png"
+              alt="Laptop Image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section class="contact-section" id="contact">
+      <div class="container-box">
+        <h2><span class="colored-text">Contact</span> Me</h2>
+        <span
+          >Here you will find my contact information and you can direct contact
+          with me!</span
+        >
+        <div class="flex-box">
+          <div class="left-div">
+            <div class="contact-card">
+              <i class="fa-solid fa-address-card"></i>
+              <span
+                >Facebook:
+                <a
+                  href="https://www.facebook.com/ashikujjaman.himel"
+                  target="_blank"
+                  >Ashikujjaman Himel</a
+                ></span
+              >
+              <span
+                >Email:
+                <a href="mailto:ashikujjamanhimel@gmail.com" target="_blank"
+                  >ashikujjamanhimel@gmail.com</a
+                ></span
+              >
+              <span
+                >WhatsApp:
+                <a href="https://wa.me/+8801770473899" target="_blank"
+                  >+8801770473899</a
+                ></span
+              >
+              <span
+                >Mobile: <a href="tel:+8801770473899">+8801770473899</a></span
+              >
+            </div>
+          </div>
+          <div class="right-div">
+            <form
+              action="https://formsubmit.co/aaf71b51111d57eb494eb3ca0e5ca21c"
+              method="POST"
+            >
+              <div class="input-flex">
+                <div class="left-div">
+                  <label for="name">Your Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+                <div class="right-div">
+                  <label for="email">Your Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+              </div>
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                placeholder="Enter the subject"
+                required
+              />
+              <label for="message">Your Message</label>
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Enter your message"
+                required
+              ></textarea>
+              <button type="submit" class="button">
+                Send Message <i class="fa-solid fa-paper-plane"></i>
+              </button>
+
+              <input
+                type="hidden"
+                name="_subject"
+                value="Contact from Portfolio Website!"
+              />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://ashik-himel.github.io/pages/thank-you.html"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="main-footer container-box"></div>
+      <div class="bottom-footer container-box">
+        <span
+          >Copyright&copy;<span class="current-year"></span> Ashik-Himel. All
+          rights reserved. Design and Developed by
+          <a href="https://www.facebook.com/ashikujjaman.himel" target="_blank"
+            >Ashik-Himel</a
+          >.</span
+        >
+      </div>
+    </footer>
+
+    <!-- Scroll To Top -->
+    <a href="#home" class="scroll-to-top"
+      ><img src="assets/images/scroll-top.gif" alt="Scroll To Top Icon"
+    /></a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

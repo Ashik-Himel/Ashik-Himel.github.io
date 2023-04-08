@@ -1,41 +1,39 @@
 <!DOCTYPE html>
-<html lang="en" class="root">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thank You :: Ashik-Himel</title>
-    <link rel="shortcut icon" href="../images/site-icon.png" type="image/x-icon">
-    <!-- FontAwesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+      rel="shortcut icon"
+      href="/assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- Fontawesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-<main class="thank-section">
-    <div class="container">
+    <link rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    <main class="thank-section">
+      <div class="container-box">
         <div class="thank">
-            <h2><span class="text-primary">Thank</span> You!</h2>
-            <p>Thank you for submiting this form. We'll contact with you as soon as possible.</p>
+          <h2><span class="text-primary">Thank</span> You!</h2>
+          <p>
+            Thank you for your message. I will contact with you as soon as
+            possible.
+          </p>
         </div>
         <div>
-            <a href="../index.html" class="btn">Return Home <i class="fas fa-share-square"></i></a>
+          <a href="/" class="button"
+            >Return Home <i class="fas fa-share-square"></i
+          ></a>
         </div>
-    </div>
-</main>
-
-<script>
-    const theme = document.querySelector(".root");
-    let checkThemeValue = localStorage.getItem('themeValue');
-    if(checkThemeValue == '0') {
-        theme.classList.remove('dark');
-    }
-    if(checkThemeValue == '1') {
-        theme.classList.add('dark');
-    }
-    else {
-        theme.classList.remove('dark');
-    }
-</script>
-</body>
+      </div>
+    </main>
+  </body>
 </html>
