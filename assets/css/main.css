@@ -138,11 +138,15 @@ textarea {
   border-radius: 5px;
   margin-bottom: 1rem;
 }
-label, input, textarea, [type="submit"] {
+label,
+input,
+textarea,
+[type="submit"] {
   display: block !important;
   margin-inline: auto;
 }
-.light input, .light textarea {
+.light input,
+.light textarea {
   border: 2px solid rgba(0, 0, 0, 0.2);
 }
 textarea {
@@ -154,7 +158,8 @@ textarea:focus {
   outline: none;
   background-color: var(--title-color);
 }
-.light input:focus, .light textarea:focus {
+.light input:focus,
+.light textarea:focus {
   background-color: white;
   border-color: var(--primary-color);
 }
@@ -522,7 +527,7 @@ header .nav-area.active .nav-social {
 }
 .skills-section .progress-area {
   margin-bottom: 1.5rem;
-  box-shadow: var(--box-shadow)
+  box-shadow: var(--box-shadow);
 }
 .light .skills-section .progress-area {
   box-shadow: none;
@@ -537,7 +542,17 @@ header .nav-area.active .nav-social {
   border: 1px solid var(--primary-color);
 }
 .skills-section .progress-status {
-  background: var(--primary-color) linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  background: var(--primary-color)
+    linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.15) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.15) 50%,
+      rgba(255, 255, 255, 0.15) 75%,
+      transparent 75%,
+      transparent
+    );
   background-size: 1rem 1rem;
   height: 100%;
   border-top-left-radius: inherit;
