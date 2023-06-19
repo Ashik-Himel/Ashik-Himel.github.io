@@ -14,7 +14,6 @@
 /* Presets */
 :root {
   --primary-color: #38bdf8;
-  /* --primary-color: #ff014f; */
   --title-color: #e2e8f0;
   --sub-title-color: #f8fafc;
   --text-color: #94a3b8;
@@ -45,6 +44,16 @@
   --sub-title-bottom-margin: 1.5rem;
 
   --box-shadow: 2px 3px 35px 15px rgba(0, 0, 0, 0.3);
+}
+.light:root {
+  --primary-color: #4f46e5;
+  --title-color: #0f172a;
+  --sub-title-color: #0f172a;
+  --text-color: #64748b;
+  --bg-color: #fff;
+  --bg-color-alt: #fff;
+  --border-color: #eaeaea;
+  --box-shadow: 2px 3px 25px rgba(0, 0, 0, 0.3);
 }
 *,
 ::before,
@@ -116,6 +125,7 @@ ul {
 }
 label {
   display: block;
+  max-width: 500px;
   margin-bottom: 1rem;
 }
 input,
@@ -128,6 +138,13 @@ textarea {
   border-radius: 5px;
   margin-bottom: 1rem;
 }
+label, input, textarea, [type="submit"] {
+  display: block !important;
+  margin-inline: auto;
+}
+.light input, .light textarea {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
 textarea {
   resize: none;
   height: 120px;
@@ -135,7 +152,11 @@ textarea {
 input:focus,
 textarea:focus {
   outline: none;
+  background-color: var(--title-color);
+}
+.light input:focus, .light textarea:focus {
   background-color: white;
+  border-color: var(--primary-color);
 }
 button {
   border: none;
@@ -151,7 +172,7 @@ button {
 }
 ::selection {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--title-color);
 }
 
 /* Utility Classes */
@@ -226,7 +247,7 @@ button {
 }
 .header-section .logo {
   font-size: 1.5rem;
-  color: white;
+  color: var(--title-color);
 }
 .header-section .header-icons {
   display: flex;
@@ -234,7 +255,7 @@ button {
   gap: 1.2rem;
 }
 .header-section .header-icons i {
-  color: white;
+  color: var(--title-color);
   font-size: 1.3rem;
   display: block;
   margin-top: 5px;
@@ -254,6 +275,10 @@ button {
   box-shadow: 2px 0 40px 15px rgba(0, 0, 0, 0.3);
   transition: left 0.3s ease;
   z-index: 11;
+}
+.light .nav-area {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-right: none;
 }
 .nav-area.active {
   left: 0;
@@ -286,7 +311,7 @@ button {
   color: var(--primary-color);
 }
 .nav-section li a:hover {
-  color: white;
+  color: var(--title-color);
 }
 .nav-section ul a.active {
   background-color: var(--primary-color);
@@ -390,7 +415,7 @@ header .nav-area.active .nav-social {
 }
 .hero-section .hero-pre-title .text {
   display: inline-block;
-  background-color: white;
+  background-color: var(--title-color);
   color: var(--bg-color);
   padding: 2px 25px;
   border-radius: 4px;
@@ -426,7 +451,7 @@ header .nav-area.active .nav-social {
   margin-bottom: 2rem;
 }
 .educations-section .educations-toggler > * {
-  color: white;
+  color: var(--title-color);
   display: inline-block;
   padding: 8px 20px;
   cursor: pointer;
@@ -480,6 +505,43 @@ header .nav-area.active .nav-social {
 .educations-section .educations-card.active,
 .educations-section .courses-card.active {
   display: flex;
+}
+
+/* Skills Section */
+.skills-section .flex-box {
+  gap: 0;
+}
+.skills-section .flex-box > * {
+  max-width: 500px;
+}
+.skills-section .skill-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.skills-section .progress-area {
+  margin-bottom: 1.5rem;
+  box-shadow: var(--box-shadow)
+}
+.light .skills-section .progress-area {
+  box-shadow: none;
+}
+.skills-section .progress-wrapper {
+  background-color: white;
+  height: 12px;
+  width: 100%;
+  border-radius: 8px;
+}
+.light .skills-section .progress-wrapper {
+  border: 1px solid var(--primary-color);
+}
+.skills-section .progress-status {
+  background: var(--primary-color) linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  background-size: 1rem 1rem;
+  height: 100%;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
 }
 
 /* Works Section */
@@ -570,7 +632,7 @@ header .nav-area.active .nav-social {
   font-weight: 500;
 }
 .contact-card a {
-  color: white;
+  color: var(--title-color);
   text-decoration: underline;
   margin-left: 0.5rem;
 }
@@ -601,6 +663,10 @@ header .nav-area.active .nav-social {
   right: 2rem;
   border: 2px solid var(--primary-color);
   transition: bottom 0.5s ease;
+}
+.light .scroll-to-top {
+  background-color: var(--title-color);
+  border-color: var(--title-color);
 }
 .scroll-to-top.active {
   bottom: 2rem;
@@ -650,14 +716,21 @@ header .nav-area.active .nav-social {
     gap: 1rem;
     width: 100%;
     max-width: 500px;
+    margin-inline: auto;
   }
   .contact-section .input-flex > * {
     width: 50%;
+  }
+  .skills-section .flex-box {
+    gap: 2rem;
   }
 }
 @media screen and (min-width: 992px) {
   .container-box {
     padding: 0 5rem;
+  }
+  .skills-section .flex-box {
+    gap: 4rem;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -704,6 +777,10 @@ header .nav-area.active .nav-social {
   }
   .about-section .about-info-box {
     max-width: 80%;
+  }
+
+  .skills-section .flex-box {
+    gap: 6rem;
   }
 }
 @media screen and (min-width: 1400px) {

@@ -42,6 +42,35 @@ window.addEventListener("click", (e) => {
   }
 });
 
+// Theme Toggler
+const themeToggler = document.querySelector("#theme-toggler");
+const theme = document.querySelector("html");
+
+function lightEnable() {
+    themeToggler.classList.add("fa-moon");
+    theme.classList.add("light");
+}
+function lightDisable() {
+  themeToggler.classList.remove("fa-moon");
+  theme.classList.remove("light");
+}
+
+if (localStorage.getItem('themeValue') == '1') {
+    lightEnable();
+}
+
+function themeChanger() {
+    if(localStorage.getItem('themeValue') == '1') {
+        localStorage.setItem('themeValue' , '0');
+        lightDisable();
+    }
+    else {
+      localStorage.setItem('themeValue' , '1');
+      lightEnable();
+    }
+}
+themeToggler.addEventListener("click", themeChanger);
+
 // Experience Year
 const experienceYear = document.querySelectorAll(".experience-year");
 const experienceDuration = new Date(
