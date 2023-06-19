@@ -779,11 +779,11 @@ header .nav-area.active .nav-social {
   .header-section .nav-area {
     margin-left: auto;
     margin-right: 1.5rem;
-    background-color: transparent;
+    background-color: transparent !important;
+    border-right: none !important;
     position: static;
     max-width: initial;
     box-shadow: none;
-    border-right: none;
   }
   .nav-area .nav-profile,
   .nav-area .nav-social,
