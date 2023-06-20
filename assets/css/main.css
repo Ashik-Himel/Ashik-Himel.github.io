@@ -261,13 +261,37 @@ button {
   align-items: center;
   gap: 1.2rem;
 }
-.header-section .header-icons #theme-toggler {
-  color: var(--title-color);
-  font-size: 1.5rem;
-  display: block;
-  margin-top: 5px;
+.header-section #theme-toggler {
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.header-section #theme-toggler-label {
+  all: unset;
+  display: inline-flex !important;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--title-color);
+  color: var(--bg-color);
+  font-size: 1.4rem;
+  padding: 4px 6px;
+  border-radius: 18px;
+  position: relative;
   cursor: pointer;
-  transition: color 0.3s ease;
+}
+.header-section #theme-toggler-label .round {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  transition: transform 0.5s ease-out;
+}
+.header-section #theme-toggler:checked + #theme-toggler-label .round {
+  transform: translateX(32px);
 }
 .nav-area {
   position: fixed;
@@ -607,6 +631,9 @@ header .nav-area.active .nav-social {
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
   font-weight: 500;
+  background-color: rgba(79, 70, 229, 0.25);
+  padding: 1px 5px;
+  border-radius: 3px;
 }
 .works-section .works-info h3 {
   margin-bottom: 0;
@@ -804,9 +831,6 @@ header .nav-area.active .nav-social {
   .nav-area ul a.active {
     background: none;
     color: var(--title-color);
-  }
-  .header-section .header-icons #theme-toggler {
-    margin-top: 0;
   }
 
   /* About Section */

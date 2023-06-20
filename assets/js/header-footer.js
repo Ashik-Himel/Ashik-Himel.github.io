@@ -6,12 +6,16 @@ const navLink = document.querySelectorAll(".nav-section ul li a");
 // Theme Toggler
 const themeToggler = document.querySelector("#theme-toggler");
 const theme = document.querySelector("html");
+const myPhoto = document.querySelectorAll("[src='assets/images/my-photo.png']");
 
 function darkEnable() {
+  themeToggler.checked = "checked";
   theme.classList.add("dark");
+  myPhoto.forEach(n => n.src = "assets/images/my-photo-dark.png");
 }
 function darkDisable() {
   theme.classList.remove("dark");
+  myPhoto.forEach(n => n.src = "assets/images/my-photo.png");
 }
 
 if (localStorage.getItem("themeValue") == "1") {
