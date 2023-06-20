@@ -8,13 +8,9 @@ const themeToggler = document.querySelector("#theme-toggler");
 const theme = document.querySelector("html");
 
 function darkEnable() {
-  themeToggler.classList.add("fa-sun");
-  themeToggler.classList.remove("fa-moon");
   theme.classList.add("dark");
 }
 function darkDisable() {
-  themeToggler.classList.remove("fa-sun");
-  themeToggler.classList.add("fa-moon");
   theme.classList.remove("dark");
 }
 

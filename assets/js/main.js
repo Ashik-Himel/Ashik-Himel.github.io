@@ -40,3 +40,28 @@ courseTogglerBtn.addEventListener("click", () => {
     coursesCard.classList.add("active");
   }
 });
+
+// Button Group
+const button1 = document.querySelectorAll(".button-group > *:first-child");
+const button2 = document.querySelectorAll(".button-group > *:last-child");
+
+button1.forEach((n) =>
+  n.addEventListener("mouseover", function () {
+    button2.forEach((n) => n.classList.remove("button-alt"));
+  })
+);
+button1.forEach((n) =>
+  n.addEventListener("mouseout", function () {
+    button2.forEach((n) => n.classList.add("button-alt"));
+  })
+);
+button2.forEach((n) =>
+  n.addEventListener("mouseover", function () {
+    button1.forEach((n) => n.classList.add("button-alt"));
+  })
+);
+button2.forEach((n) =>
+  n.addEventListener("mouseout", function () {
+    button1.forEach((n) => n.classList.remove("button-alt"));
+  })
+);
