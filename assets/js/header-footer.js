@@ -11,11 +11,11 @@ const myPhoto = document.querySelectorAll("[src='assets/images/my-photo.png']");
 function darkEnable() {
   themeToggler.checked = "checked";
   theme.classList.add("dark");
-  myPhoto.forEach(n => n.src = "assets/images/my-photo-dark.png");
+  myPhoto.forEach((n) => (n.src = "assets/images/my-photo-dark.png"));
 }
 function darkDisable() {
   theme.classList.remove("dark");
-  myPhoto.forEach(n => n.src = "assets/images/my-photo.png");
+  myPhoto.forEach((n) => (n.src = "assets/images/my-photo.png"));
 }
 
 if (localStorage.getItem("themeValue") == "1") {
